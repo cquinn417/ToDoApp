@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1029184536731",
+    "project_id": "todo-qcr64x",
+    "storage_bucket": "todo-qcr64x.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1029184536731:android:e2397afc6a7fc104cfc63e",
+        "android_client_info": {
+          "package_name": "com.mycompany.todo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCorgCxQYao0AY1lmB5CXuOvx0QhfWDtKA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
