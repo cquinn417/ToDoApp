@@ -1,0 +1,44 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+      "tasks": {
+        "type": "object",
+        "patternProperties": {
+          "^[a-zA-Z0-9_-]+$": {
+            "type": "object",
+            "properties": {
+              "created_time": {
+                "type": "string",
+                "format": "date-time",
+                "description": "Timestamp when the task was created."
+              },
+              "description": {
+                "type": "string",
+                "description": "The description of the task."
+              },
+              "due_date": {
+                "type": "string",
+                "format": "date-time",
+                "description": "The due date for the task."
+              },
+              "completed": {
+                "type": "boolean",
+                "description": "Indicates whether the task is completed."
+              },
+              "priority": {
+                "type": "string",
+                "enum": ["low", "medium", "high"],
+                "description": "The priority level of the task."
+              },
+              "assigned_user": {
+                "type": "string",
+                "description": "The UID of the user assigned to this task."
+              }
+            },
+            "required": ["created_time", "description", "assigned_user"]
+          }
+        }
+      }
+    }
+  }
