@@ -1,4 +1,5 @@
 import '/auth/firebase_auth/auth_util.dart';
+import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -787,6 +788,27 @@ class _LoginWidgetState extends State<LoginWidget>
                                   },
                                 ),
                               });
+
+                              await EmailThingCall.call(
+                                to: _model.signUpEmailTextController.text,
+                                subject: 'Account Created',
+                                text: 'Your account was successfully created!',
+                              );
+
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text(
+                                    'Email sent!',
+                                    style: TextStyle(
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
+                                    ),
+                                  ),
+                                  duration: const Duration(milliseconds: 4000),
+                                  backgroundColor:
+                                      FlutterFlowTheme.of(context).secondary,
+                                ),
+                              );
 
                               context.goNamedAuth(
                                   'onboarding', context.mounted);

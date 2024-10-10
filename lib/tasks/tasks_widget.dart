@@ -59,13 +59,13 @@ class _TasksWidgetState extends State<TasksWidget> {
               },
             ).then((value) => safeSetState(() {}));
           },
-          backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+          backgroundColor: Colors.white,
           elevation: 0.0,
           child: Container(
             width: double.infinity,
             height: double.infinity,
             decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).primary,
+              color: const Color(0xFFF06CDE),
               borderRadius: BorderRadius.circular(50.0),
               border: Border.all(
                 color: FlutterFlowTheme.of(context).primaryText,
